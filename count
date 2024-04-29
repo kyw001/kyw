@@ -1,0 +1,9 @@
+#!/bin/bash
+
+where="$1"
+
+dir=$(ls -l $where | cut -c1 | grep 'd' | wc -l)
+file=$(ls -l $where | cut -c1 | grep -v 'd' | wc -l)
+
+echo "현재 위치: $where"
+echo "파일 $file개, 폴더$dir개입니다."
